@@ -43,7 +43,7 @@ public class Produto implements Serializable {
     private Integer idProduto;
     @Size(max = 255)
     @Column(name = "nome")
-    private String nome;
+    public String nome;
     @Column(name = "quantidade")
     private Integer quantidade;
     @Column(name = "precoVenda")

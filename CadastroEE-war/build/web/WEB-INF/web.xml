@@ -35,4 +35,9 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
     <url-pattern>/ServletProduto</url-pattern>
 </servlet-mapping>
 
+<servlet-mapping>
+    <servlet-name>ServletProdutoFC</servlet-name>
+    <url-pattern>/ServletProdutoFC</url-pattern>
+</servlet-mapping>
+
 </web-app>
