@@ -4,39 +4,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <meta charset="UTF-8">
     <title>Listagem de Produtos</title>
     <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
-            text-align: center;
-        }
-        .btn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background-color: #45a049;
-        }
+
     </style>
 </head>
-<body>
+<body class="container">
     <h1>Listagem de Produtos</h1>
     
     <a href="${pageContext.request.contextPath}/ServletProdutoFC?acao=incluir"
-       class="btn">Novo Produto</a>
+       class="btn  btn-primary m-2">Novo Produto</a>
 
-    <table>
-        <tr>
-            <th>ID</th>
+       <table class="table table-striped">
+        <tr class="table-dark">
+            <th>#</th>
             <th>Nome</th>
             <th>Quantidade</th>
             <th>Preço de Venda</th>
@@ -50,10 +33,12 @@
                 <td>${produto.quantidade}</td>
                 <td>R$ ${produto.precoVenda}</td>
                 <td>
-                    <a href="${pageContext.request.contextPath}/ServletProdutoFC?acao=alterar&id=${produto.idProduto}">Alterar</a>
-                    | 
+                    <a href="${pageContext.request.contextPath}/ServletProdutoFC?acao=alterar&id=${produto.idProduto}"
+                       class="btn btn-primary  btn-sm">Alterar</a>
+                    
                     <a href="${pageContext.request.contextPath}/ServletProdutoFC?acao=excluir&id=${produto.idProduto}"
-                       onclick="return confirm('Tem certeza que deseja excluir esse produto?')">Excluir</a>
+                       onclick="return confirm('Tem certeza que deseja excluir esse produto?')" class="btn btn-danger btn-sm"
+                       >Excluir</a>
                 </td>
             </tr>
         </c:forEach>

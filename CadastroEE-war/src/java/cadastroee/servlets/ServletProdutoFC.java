@@ -52,6 +52,7 @@ public class ServletProdutoFC extends HttpServlet {
                     break;
                 case "excluir":
                     excluirProduto(request);
+                    destino = "ServletProdutoFC?acao=listar";
                     break;
                 case "alterar":
                     alterarProduto(request, acao);
