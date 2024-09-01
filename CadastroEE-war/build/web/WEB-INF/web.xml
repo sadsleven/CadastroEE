@@ -29,5 +29,10 @@ xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/
    <session-timeout>30</session-timeout>
 
  </session-config>
+ 
+<servlet-mapping>
+    <servlet-name>ServletProduto</servlet-name>
+    <url-pattern>/ServletProduto</url-pattern>
+</servlet-mapping>
 
 </web-app>
